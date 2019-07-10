@@ -1,8 +1,12 @@
-import React,{Fragment} from "react";
+import React,{Fragment,Component} from "react";
 import ReactDOM from "react-dom";
 
 //组件
 import abc,{string,number} from "prop-types";
+
+//关于引入暴露文件
+import a,{name,age} from "./demo"
+
 // import "./assets/base.css"
 //Fragments可以让你聚合一个子元素列表，并且不在DOM中增加额外节点
 //ReactDOM.render("1111111",document.getElementById("app"));
@@ -101,9 +105,171 @@ import abc,{string,number} from "prop-types";
 //1. 类组件必须要继承 React 基础组件
 //2. 类组件必须要有render 方法 并且在render 方法中要有 return
 
-class Foo extends Component{
-  render(){
-  return <div>我的天</div>;  
-  }
-}
-ReactDOM.render(<Foo/>,document.getElementById("app"));
+// class Foo extends Component{
+//   render(){
+//   return <div>我的天</div>;  
+//   }
+// }
+// ReactDOM.render(<Foo/>,document.getElementById("app"));
+
+// ReactDOM.render(
+//   <div>
+//     <Foo id="box" title="hello"/>
+//     <Bar id="box" title="hello"/>
+//   </div>,
+//   document.getElementById("app")
+// )
+
+//props的校验
+// 1.需要引入一个额外的模块 prop-types
+// 2.设置组件的propTypes属性
+// class Bar extends Component{
+//   render(){
+//     return(
+//         <div>
+//         <h1>我的地呀</h1>
+//         <p>Bar</p>
+//         <p>id:{this.props.id}</p>
+//         <p>title:{this.props.title}</p>
+//       </div>     
+//     )
+//   }
+// }
+// ReactDOM.render(<Bar/>,document.getElementById("app"));
+// //这里的propTypes是固定的
+// Bar.propTypes ={
+//   id:string
+// };
+// const Foo=props => {
+//   return (
+//     <h1>
+//       {props.age}-{props.name}
+//     </h1>
+//   );
+// }
+// Foo.propTypes={
+//   age:number
+// };
+// Foo.defaultProps = {
+//   name:"张三"
+// };
+// ReactDOM.render(
+//   <div>
+//     <Bar id={123} title="hello" />
+//     <Foo age="123" name="李四" />
+//   </div>,
+//   document.getElementById("app")
+// )
+
+// react中插槽的使用，
+// 1.react没有插槽
+// 2.要在组件内不同位置渲染出不同的react元素 需要主动设置为prop的方式
+// const Bar =({top,bootom}) => {
+//   return (
+//     <div>
+//       {top}
+//       我的天
+//       {bottom}
+//     </div>
+//   );
+// }
+// //定义属于哪个元素的插槽
+// ReactDOM.render(
+//   <div>
+//     <Bar top={<p>123</p>} bottom={<p>2323</p>}></Bar>
+//   </div>,
+//   document.getElementById("app")
+// )
+
+// console.log(name);
+// console.log(age)
+
+//条件渲染
+// class App extends Component{
+//   render(){
+//     let btn=null;
+//     if(this.props.isLogin){
+//       btn=<button>登出</button>;
+//     }else{
+//       btn=<button>登录</button>
+//     }
+//     let p=null;
+//     if(this.props.name){
+//       p=<p>欢迎您 - {this.props.name}</p>
+//     }
+//     return(
+//       <div>
+//         {btn}
+//       {this.props.name&&<p>欢迎您 - {this.props.name}</p>}
+//       </div>
+//     );
+//   }
+  
+// }
+// ReactDOM.render(
+//   <App isLogin={true} name="abc"/>,
+//   document.getElementById("app")
+// )
+
+//循环渲染
+// class App extends Component{
+//   render() {
+//     let list=["apple","banana","orange"];
+//     let result=[];
+//     for(let i=0;i<list.length;i++){
+//       result.push(<li>{list[i]}</li>)
+//     }
+//     return(
+//       <div>
+//         <h1>选择水果</h1>
+//         <ul>
+//           {/* {list.map((item,index) => {
+//             return <li key={index}>{item}</li>
+//           })} */}
+//           {result}
+//         </ul>
+//       </div>
+//     )
+//   }
+// }
+// ReactDOM.render(<App />,document.getElementById("app"))
+
+// let list=[];
+
+// const Add = () => {
+//   let myInput=document.getElementById("myInput");
+//   let value=myInput.value;
+//   console.log(value);
+//   list.push(value);
+//   ReactDOM.render(<App/>,document.getElementById("app"));
+// }
+// const Del= () => {
+//   list.splice(index,1);
+//   ReactDOM.render(<App/>,document.getElementById("app"))
+// }
+// const App= () => {
+//   return(
+//     <div>
+//       <input type="text" id="myInput"/>
+//       <button onClick={Add}>
+//           点我添加
+//       </button>
+//       <ul>
+//         {list.map((item,index) => {
+//           return (
+//             <li key={index}>
+//               {item}
+//               <span
+//               onClick={() => {
+//                 Del(index);
+//               }}
+//               >删除</span>
+//                </li>
+//           );
+//         })}      
+//       </ul>
+//     </div>
+//   );
+// }
+// ReactDOM.render(<App />,document.getElementById("app"))
+
