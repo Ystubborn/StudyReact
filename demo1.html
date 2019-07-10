@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>
+  </div>
+  <script type="text/babel">
+  // ReactDOM.render("开始react！",document.getElementById("root"));
+
+  // ReactDOM.render(
+  //   "<h1>渲染出-我的天</h1>",
+  //   document.getElementById("root")
+  // )
+  //这里渲染出的为字符串
+
+  // 创建出DOM元素
+  // let btn=React.createElement("button",null,"click");
+  // let span=React.createElement("span",null,"xxxx")
+  // let h1=React.createElement("h1",null,[btn,span]);
+
+  // ReactDOM.render(h1,document.getElementById("root"))
+
+  // 使用JSX语法来替换 React.createElement
+  ReactDOM.render(
+    <h1>
+    <button>点我</button>
+    <span>this is a span</span>
+    </h1>,
+    document.getElementById("root")
+  )
+  </script>
+</body>
+</html>

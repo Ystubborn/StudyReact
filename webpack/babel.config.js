@@ -1,0 +1,7 @@
+//babel的配置文件
+module.exports={
+  //预设
+  presets:["@babel/preset-env","@babel/preset-react"],
+  //插件
+  plugins:[]
+}
