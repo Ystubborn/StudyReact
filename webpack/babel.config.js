@@ -3,5 +3,5 @@ module.exports={
   //预设
   presets:["@babel/preset-env","@babel/preset-react"],
   //插件
-  plugins:[]
+  plugins:["@babel/plugin-proposal-class-properties"]
 }
