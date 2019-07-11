@@ -111,4 +111,33 @@ import App from "./App.js";
 // };
 // ReactDOM.render(<App/>,document.getElementById("app"));
 
-ReactDOM.render(<App/>,document.getElementById("app"))
+// ReactDOM.render(<App/>,document.getElementById("app"))
+
+
+// class Root extends Component{
+//   constructor(props){
+//     super(props);
+//     this.state = {
+//       firstName: "张",
+//       lastName: "三"
+//     };
+//   }
+//   render(){
+//     return(
+//       <div>
+//       <button
+//       onClick={() => {
+//         this.setState({
+//           firstName: "李"
+//         });
+//       }}
+//       >
+//       点击修改姓名
+//       </button>
+//       <App firstName={this.state.firstName}  lastName={this.state.lastName}/>
+//       </div>
+//     )
+//   }
+// }
+// ReactDOM.render(<Root/>,document.getElementById("app"));
+ReactDOM.render(<App/>,document.getElementById("app"));
