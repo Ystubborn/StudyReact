@@ -896,6 +896,11 @@
   resolved "https://registry.npm.taobao.org/@xtuc/long/download/@xtuc/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha1-0pHGpOl5ibXGHZrPOWrk/hM6cY0=
 
+PubSub@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.npm.taobao.org/PubSub/download/PubSub-3.6.0.tgz#b0c79ae78a7a140752b10bd90b1cfbde61962096"
+  integrity sha1-sMea54p6FAdSsQvZCxz73mGWIJY=
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/abbrev/download/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

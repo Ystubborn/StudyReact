@@ -18,6 +18,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "@babel/preset-env": "^7.5.2",
     "@babel/preset-react": "^7.0.0",
+    "PubSub": "^3.6.0",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.3",
     "html-webpack-plugin": "^3.2.0",

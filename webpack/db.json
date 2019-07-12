@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "username": "张三",
+      "password": "123",
+      "sex": 1,
+      "city": "0001",
+      "id": 1
+    },
+    {
+      "username": "李四",
+      "password": "123",
+      "sex": 0,
+      "city": "0002",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "sex": 0,
+      "city": "0003",
+      "id": 3
+    },
+    {
+      "username": "我的天",
+      "password": "123",
+      "sex": 0,
+      "city": "0002",
+      "id": 4
+    },
+    {
+      "username": "我的地",
+      "password": "123",
+      "sex": 0,
+      "city": "0004",
+      "id": 5
+    },
+    {
+      "username": "莉莉丝",
+      "password": "ssssss",
+      "sex": 0,
+      "city": "0003",
+      "id": 6
+    }
+  ],
+  "cityList": [
+    {
+      "id": 1,
+      "name": "北京市",
+      "cityId": "0001"
+    },
+    {
+      "id": 2,
+      "name": "深圳市",
+      "cityId": "0002"
+    },
+    {
+      "id": 3,
+      "name": "上海市",
+      "cityId": "0003"
+    },
+    {
+      "id": 4,
+      "name": "广州市",
+      "cityId": "0004"
+    }
+  ]
+}
