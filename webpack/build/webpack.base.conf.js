@@ -26,7 +26,13 @@ module.exports = {
       }
     ]
   },
-
+  //别名
+  resolve:{
+    alias:{
+      '@':path.resolve(__dirname,"../src")
+    }
+  },
+  //插件
   plugins: [
     // html-webpack-plugin
     new HtmlWebpackPlugin({
